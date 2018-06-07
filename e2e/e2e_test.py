@@ -69,7 +69,7 @@ class ClientCertificateRestrictionTestCase(unittest.TestCase):
     response = requests.get(
       'https://localhost:10000/get',
       verify=False,
-      cert=('/tmp/pki/root/certs/bob@acme.com.crt', '/tmp/pki/root/keys/bob@acme.com.key'))
+      cert=('/tmp/pki/root/certs/www.umbrella.com.crt', '/tmp/pki/root/keys/www.umbrella.com.key'))
     self.assertEqual(httplib.OK, response.status_code)
 
     # Make an invalid request.
