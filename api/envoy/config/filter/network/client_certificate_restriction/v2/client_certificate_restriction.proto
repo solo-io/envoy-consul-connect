@@ -2,10 +2,13 @@ syntax = "proto3";
 
 package envoy.config.filter.network.client_certificate_restriction.v2;
 
+option go_package = "github.com/solo-io/gloo-enterprise/pkg/plugins/connect";
+
 import "google/protobuf/duration.proto";
 
 import "validate/validate.proto";
 import "gogoproto/gogo.proto";
+option (gogoproto.equal_all) = true;
 
 // [#protodoc-title: Client certificate restriction]
 // Client certificate restriction
